@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
+	<style type="text/css">
+        body,div,span,p,var,em,strong,a,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,img{margin:0;padding:0;font-family:Arial;}
+        .clear {clear:both;overflow:hidden;height:0;}
+        img{border:none;}
+        a {text-decoration:none;}
+        ul,ol{list-style-type:none;}
+        div{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size:1.2em;
+            background: #000;
+            color: #fff;
+            margin:50px auto;
+
+        }
+    </style>
+
+</head>
+<body>
+ <div onclick="doClear()">一键清理清理缓存</div>
+ 缓存个数：<textarea id="txt"></textarea>
+</body>
+<script type="text/javascript">
+    document.getElementById('txt').value=localStorage.length;
+    function  doClear(argument) {
+        localStorage.clear();
+        document.getElementById('txt').value=localStorage.length;
+        alert("清理成功")
+    }
+</script>
+</html>
